@@ -10,7 +10,7 @@ My golang learning journey inspired by the tutorial @ gobyexample.com
 
 To run the Hello World example, `<FILENAME>` becomes `01-hello-world.go`.
 
-# Knowledge folder (`knowledge`)
+# `knowledge` folder
 
 - [Commonly seen symbols](knowledge/symbols.md)
 - [Commonly seen keywords](knowledge/keywords.md)

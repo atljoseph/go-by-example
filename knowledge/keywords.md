@@ -8,7 +8,6 @@ fmt.Println
 var
 const
 if
-then
 else
 switch
 case
@@ -16,10 +15,10 @@ default
 for
 break
 continue
-(slices) []bool, [][]int, append
+(slices) []bool, [][]int, append, len
 make
 copy
-
+(maps) map[string]int, delete, len
 
 
 
