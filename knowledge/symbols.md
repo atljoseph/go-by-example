@@ -34,3 +34,16 @@ w = x[y:z]
 w = x[:y]
 w = x[y:]
 ```
+
+# Pointers
+
+```
+&
+*
+```
+
+# Structs
+
+```
+cupcake{isChocolate: true}
+```

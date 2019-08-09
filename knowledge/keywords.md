@@ -19,6 +19,8 @@ continue
 make
 copy
 (maps) map[string]int, delete, len
+type
+struct
 
 
 

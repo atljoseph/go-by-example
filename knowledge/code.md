@@ -133,3 +133,19 @@ func factorial(n int) int {
 fmt.Println(factorial(7))
 ```
 
+# Structs
+
+```
+type cat struct {
+	name      string
+	meowIndex int
+}
+func quietKitty(meowPtr *int) {
+	*meowPtr = 0
+}
+myCat := cat{"kitKat", 10}
+yourCat := cat{name: "kittyCat", meowIndex: 3}
+fmt.Println(myCat, yourCat)
+makeZero(&myCat.meowIndex)
+fmt.Println(myCat, yourCat)
+```
