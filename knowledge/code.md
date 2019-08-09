@@ -88,5 +88,48 @@ delete(n, "foo")
 val, isPresent := n["foo"]
 ```
 
+# Functions
 
+```
+func multipleReturnVals() (int, string) {
+	return 1, "two"
+}
+```
+
+```
+func sum(desc string, nums ...int) int {
+	fmt.Println(desc)
+	total := 0
+	for _, num := range nums {
+		total += num
+	}
+	return total
+}
+nums := []int{1, 2, 3, 4}
+fmt.Println(sum("Freeze, this is a stick up", nums...))
+```
+
+```
+func intSeq() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+newInt1, newInt2 := intSeq(), intSeq()
+fmt.Println(newInt1())
+fmt.Println(newInt1())
+fmt.Println(newInt2())
+```
+
+```
+func factorial(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * factorial(n-1)
+}
+fmt.Println(factorial(7))
+```
 

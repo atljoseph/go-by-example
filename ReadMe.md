@@ -10,6 +10,8 @@ My golang learning journey inspired by the tutorial @ gobyexample.com
 
 To run the Hello World example, `<FILENAME>` becomes `01-hello-world.go`.
 
+Heck, you can even use `go run e*/01*`! :)
+
 # `knowledge` folder
 
 - [Commonly seen symbols](knowledge/symbols.md)
