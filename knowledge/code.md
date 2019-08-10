@@ -90,12 +90,14 @@ val, isPresent := n["foo"]
 
 # Functions
 
+Multiple Return Values:
 ```
 func multipleReturnVals() (int, string) {
 	return 1, "two"
 }
 ```
 
+Variadic Functions:
 ```
 func sum(desc string, nums ...int) int {
 	fmt.Println(desc)
@@ -109,6 +111,7 @@ nums := []int{1, 2, 3, 4}
 fmt.Println(sum("Freeze, this is a stick up", nums...))
 ```
 
+Closure Functions:
 ```
 func intSeq() func() int {
 	i := 0
@@ -123,6 +126,7 @@ fmt.Println(newInt1())
 fmt.Println(newInt2())
 ```
 
+Recursive Functions:
 ```
 func factorial(n int) int {
 	if n == 0 {
@@ -148,4 +152,96 @@ yourCat := cat{name: "kittyCat", meowIndex: 3}
 fmt.Println(myCat, yourCat)
 makeZero(&myCat.meowIndex)
 fmt.Println(myCat, yourCat)
+```
+
+# Methods
+
+```
+type rect struct {
+	width, height int
+}
+func (r *rect) smaller() {
+	r.width = r.width - 1
+	r.height = r.height - 1
+}
+r.smaller()
+```
+
+# Interfaces
+
+```
+type geometry interface {
+	area() float64
+	perim() float64
+}
+type circle struct {
+	radius float64
+}
+func (c circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+func (c circle) perim() float64 {
+	return 2 * math.Pi * c.radius
+}
+func measure(g geometry) {
+	fmt.Println(g)
+	fmt.Println(g.area())
+	fmt.Println(g.perim())
+}
+c := circle{radius: 5}
+measure(c)
+```
+
+# Errors
+
+Basic Error:
+```
+func funcWithError() (int, error) {
+	return -1, errors.New("houston, we have a problem")
+}
+if r, e := funcWithError(); e != nil {
+    fmt.Println("error:", e)
+} else {
+    fmt.Println("success:", r)
+}
+```
+
+Custom Error:
+```
+type argError struct {
+	arg  int
+	prob string
+}
+func (e *argError) Error() string {
+	return fmt.Sprintf("%d - %s", e.arg, e.prob)
+}
+func funcWithError() (int, error) {
+	return -1, &argError{arg, "oh no, my cheese dip is cold"}
+}
+if r, e := funcWithError(); e != nil {
+    fmt.Println("error:", e)
+} else {
+    fmt.Println("success:", r)
+}
+```
+
+# Goroutines
+
+Concurrency:
+```
+func f(from string) {
+    for i := 0; i < 25; i++ {
+        fmt.Println(from, ":", i)
+    }
+}
+go f("1")
+go f("2")
+```
+
+Channels:
+```
+resultChan := make(chan int)
+go func() { resultChan <- 100 }()
+result := <-resultChan
+fmt.Println(result)
 ```

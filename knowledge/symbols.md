@@ -38,7 +38,7 @@ w = x[y:]
 # Pointers
 
 ```
-&
+& 
 *
 ```
 
@@ -46,4 +46,10 @@ w = x[y:]
 
 ```
 cupcake{isChocolate: true}
+```
+
+# Channels
+
+```
+<-
 ```

@@ -16,6 +16,7 @@ Heck, you can even use `go run e*/01*`! :)
 
 - [Commonly seen symbols](knowledge/symbols.md)
 - [Commonly seen keywords](knowledge/keywords.md)
+- [Commonly seen imports](knowledge/imports.md)
 - [Commonly seen code structures](knowledge/code.md)
 
 

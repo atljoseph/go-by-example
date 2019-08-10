@@ -21,6 +21,8 @@ copy
 (maps) map[string]int, delete, len
 type
 struct
+interface
+go
 
 
 
