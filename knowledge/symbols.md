@@ -38,18 +38,19 @@ w = x[y:]
 # Pointers
 
 ```
-& 
-*
+&myVar 
+myVar *ptrType
 ```
 
 # Structs
 
 ```
-cupcake{isChocolate: true}
+cookie{isChocolate: true}
 ```
 
 # Channels
 
 ```
-<-
+myChan <- "new value"
+<-myChan
 ```

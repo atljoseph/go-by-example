@@ -1,4 +1,12 @@
 
+# Basic Structure
+
+```
+package main
+import "fmt"
+func main() { }
+```
+
 # Constants
 
 ```
@@ -245,3 +253,68 @@ go func() { resultChan <- 100 }()
 result := <-resultChan
 fmt.Println(result)
 ```
+
+Buffered Channels:
+```
+resultChan := make(chan int, 2)
+resultChan <- 1
+resultChan <- 2
+// resultChan <- 3 // DANGER WILL ROBINSON
+fmt.Println(<-resultChan)
+fmt.Println(<-resultChan)
+resultChan <- 4
+fmt.Println(<-resultChan)
+```
+
+Channel Syncronization:
+```
+func action(done chan bool) { 
+    time.Sleep(time.Second)
+    done <- true
+}
+done := make(chan bool, 1)
+go action(done)
+// blocking
+result := <-done
+go somethingElse(result)
+```
+
+Channel Direction:
+```
+func ping(pings chan<- string, msg string) {
+	pings <- msg
+}
+func pong(pings <-chan string, pongs chan<- string) {
+	msg := <-pings
+	pongs <- msg
+}
+pings := make(chan string, 1)
+pongs := make(chan string, 1)
+ping(pings, "passed message")
+pong(pings, pongs)
+fmt.Println(<-pongs)
+```
+
+# Selects
+
+```
+c1 := make(chan string)
+go func() {
+	time.Sleep(1 * time.Second)
+	c1 <- "one"
+}()
+c2 := make(chan string)
+go func() {
+	time.Sleep(2 * time.Second)
+	c2 <- "two"
+}()
+for i := 0; i < 2; i++ {
+	select {
+	case msg1 := <-c1:
+		fmt.Println("received 1", msg1)
+	case msg2 := <-c2:
+		fmt.Println("received 2", msg2)
+	}
+}
+```
+

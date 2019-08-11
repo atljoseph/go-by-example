@@ -1,5 +1,9 @@
 // channels are the pipes that connect concurrent goroutines
 // channels allow us to send results from one goroutine to another goroutine
+// by default, channels are unbuffered
+// that means that the send (messages <- "ping")
+// can ONLY occur if there is a corresponding receive (msg := <-messages)
+// there is a thread block that occurs if no corresponding receive is made
 
 package main
 
