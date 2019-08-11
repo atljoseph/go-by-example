@@ -158,7 +158,7 @@ func quietKitty(meowPtr *int) {
 myCat := cat{"kitKat", 10}
 yourCat := cat{name: "kittyCat", meowIndex: 3}
 fmt.Println(myCat, yourCat)
-makeZero(&myCat.meowIndex)
+quietKitty(&myCat.meowIndex)
 fmt.Println(myCat, yourCat)
 ```
 

@@ -14,9 +14,9 @@ Heck, you can even use `go run e*/01*`! :)
 
 # `knowledge` folder
 
-- [Commonly seen symbols](knowledge/symbols.md)
-- [Commonly seen keywords](knowledge/keywords.md)
-- [Commonly seen imports](knowledge/imports.md)
-- [Commonly seen code structures](knowledge/code.md)
+- [Common symbols](knowledge/symbols.md)
+- [Common keywords](knowledge/keywords.md)
+- [Common imports](knowledge/imports.md)
+- [Common code structures](knowledge/code.md)
 
 
