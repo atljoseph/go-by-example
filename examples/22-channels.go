@@ -7,6 +7,8 @@
 // "<-messages" is REALLY similar to "await", except that we are not awaiting a function result
 // we are waiting on the async function to mutate the scope
 
+// also, channels are kind of like observables in js
+
 package main
 
 import "fmt"

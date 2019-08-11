@@ -3,7 +3,7 @@ import
 (imports) fmt, time, math
 func
 fmt.Println
-(types) int, string, float64, bool
+(types) int, string, float64, bool, uint64
 (arrays) [5]string, [2][1]bool, len
 var
 const

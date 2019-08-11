@@ -7,6 +7,7 @@ import "math"
 import "errors"
 import "time"
 import "sync"
+import "sync/atomic"
 ```
 
 ```
@@ -16,5 +17,6 @@ import (
     "errors"
     "time"
     "sync"
+    "sync/atomic"
 )
 ```
