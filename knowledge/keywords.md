@@ -15,15 +15,14 @@ default
 for
 break
 continue
-(builtin) make, len, append, delete, copy
+(builtin) make, len, append, delete, copy, close
 (slices) []bool, [][]int, append, len
 (maps) map[string]int, delete, len
 type
 struct
 interface
 go
-chan
-(channel types) chan string, (sender) myChan <-chan string, (receiver) myChan chan<- string
+(channels) chan, close, chan string, (sender) myChan <-chan string, (receiver) myChan chan<- string
 select
 
 

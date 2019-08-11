@@ -233,7 +233,7 @@ if r, e := funcWithError(); e != nil {
 }
 ```
 
-# Goroutines
+# Goroutines & Channels
 
 Concurrency:
 ```
@@ -293,6 +293,18 @@ pongs := make(chan string, 1)
 ping(pings, "passed message")
 pong(pings, pongs)
 fmt.Println(<-pongs)
+```
+
+Channel Multiple Return:
+```
+jobs := make(chan string, 5)
+jobs <- "job one"
+val, more := <- jobs
+if more {
+	fmt.Println("more jobs exist")
+} else {
+	fmt.Println("no more jobs")
+}
 ```
 
 # Selects
