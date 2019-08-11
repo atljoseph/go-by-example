@@ -4,6 +4,8 @@
 // that means that the send (messages <- "ping")
 // can ONLY occur if there is a corresponding receive (msg := <-messages)
 // there is a thread block that occurs if no corresponding receive is made
+// "<-messages" is REALLY similar to "await", except that we are not awaiting a function result
+// we are waiting on the async function to mutate the scope
 
 package main
 

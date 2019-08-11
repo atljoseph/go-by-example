@@ -13,17 +13,19 @@ switch
 case
 default
 for
+range
 break
 continue
-(builtin) make, len, append, delete, copy, close
+(builtin funcs) make, len, append, delete, copy, close
 (slices) []bool, [][]int, append, len
 (maps) map[string]int, delete, len
 type
 struct
 interface
 go
-(channels) chan, close, chan string, (sender) myChan <-chan string, (receiver) myChan chan<- string
-select
+(channels) chan, close, select
+(channel types) chan string, (sender) myChan <-chan string, (receiver) myChan chan<- string
+
 
 
 

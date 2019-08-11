@@ -1,6 +1,6 @@
 # Go by Example
 
-My golang learning journey inspired by the tutorial @ gobyexample.com
+My `golang` learning journey inspired by the tutorial @ `http://gobyexample.com`.
 
 # Run a Specific Example
 

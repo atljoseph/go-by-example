@@ -307,8 +307,29 @@ if more {
 }
 ```
 
-# Selects
+# Range
 
+Range over Array/Slice/Map:
+```
+for val, idx := range []int{7, 42} {
+	fmt.Printf("Value: %d, Index: %d\n", val, idx)
+}
+```
+
+Range over Channel (Includes Timers/Tickers):
+```
+queue := make(chan string, 2)
+queue <- "one"
+queue <- "two"
+close(queue)
+for elem := range queue {
+	fmt.Println(elem)
+}
+```
+
+# Select
+
+Basic Usage:
 ```
 c1 := make(chan string)
 go func() {
@@ -330,3 +351,77 @@ for i := 0; i < 2; i++ {
 }
 ```
 
+Timeout:
+```
+c1 := make(chan string, 1)
+go func() {
+	time.Sleep(2 * time.Second)
+	c1 <- "result 1"
+}()
+select {
+case res := <-c1:
+	fmt.Println("c1", res)
+case <-time.After(1 * time.Second):
+	fmt.Println("timeout 1")
+}
+c2 := make(chan string, 1)
+go func() {
+	time.Sleep(2 * time.Second)
+	c2 <- "result 2"
+}()
+select {
+case res := <-c2:
+	fmt.Println("c2", res)
+case <-time.After(3 * time.Second):
+	fmt.Println("timeout 2")
+}
+```
+
+# Timers & Tickers
+
+Timer:
+```
+timer1 := time.NewTimer(2 * time.Second)
+timer2 := time.NewTimer(3 * time.Second)
+timer3 := time.NewTimer(1 * time.Second)
+fmt.Println("Timer 1 started")
+<-timer1.C
+fmt.Println("Timer 1 stopped")
+go func() {
+	fmt.Println("Timer 2 started")
+	<-timer2.C
+	fmt.Println("Timer 2 expired")
+}()
+fmt.Println("Timer 3 started")
+<-timer3.C
+fmt.Println("Timer 3 stopped")
+stopped2 := timer2.Stop()
+if stopped2 {
+	fmt.Println("Timer 2 stopped")
+}
+```
+
+Ticker:
+```
+ticker := time.NewTicker(500 * time.Millisecond)
+go func() {
+	for t := range ticker.C {
+		fmt.Println("Tick at", t)
+	}
+}()
+time.Sleep(2600 * time.Millisecond)
+ticker.Stop()
+fmt.Println("Ticker stoped")
+```
+
+# Worker Pools
+
+```
+
+```
+
+# Wait Groups
+
+```
+
+```
