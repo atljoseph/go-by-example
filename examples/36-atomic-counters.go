@@ -19,9 +19,9 @@ func main() {
 	// which will increment the counter once each millisecond
 	// since we are on 50 separate goroutines,
 	// we need to increment the counter
-	// use "atomic.AddUint64()" to increment a uint64 via "sync/atomic"
+	// use "atomic.AddUint64(pointer, incrementationValue)" to increment a uint64 via "sync/atomic"
 	// by using it's pointer "&ops"
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 55; i++ {
 		go func() {
 			for {
 				atomic.AddUint64(&ops, 1)
@@ -34,7 +34,7 @@ func main() {
 	time.Sleep(time.Second)
 
 	// check the number of operations
-	// use "atomic.LoadUint64()" to to safely get a copy of the instantaneous value of "opsFinal"
+	// use "atomic.LoadUint64(pointer)" to to safely get a copy of the instantaneous value of "opsFinal"
 	// using "&ops" directly might have a negative effects
 	opsFinal := atomic.LoadUint64(&ops)
 	fmt.Println("ops:", opsFinal)

@@ -411,29 +411,31 @@ go func() {
 }()
 time.Sleep(2600 * time.Millisecond)
 ticker.Stop()
-fmt.Println("Ticker stoped")
+fmt.Println("Ticker stopped")
 ```
 
-# Worker Pools
 
-```
+# Managing Goroutines
 
-```
+[Worker Pools](../examples/33-worker-pools.go)
 
-# Wait Groups
+[Wait Groups](../examples/34-wait-groups.go)
 
-```
+[Rate Limiting](../examples/35-rate-limiting.go)
 
-```
 
-# Rate Limiting
+# State Management
 
-```
+[Atomic Counters](../examples/36-atomic-counters.go)
 
-```
+[Mutexes](../examples/37-mutexes.go)
 
-# Atomic Counters
+[Stateful Goroutines](../examples/38-stateful-goroutines.go)
 
-```
 
-```
+# Sort
+
+[Basic Sorting](../examples/39-sorting.go)
+
+[Sort by Function](../examples/40-sorting-by-functions.go)
+
