@@ -200,7 +200,7 @@ c := circle{radius: 5}
 measure(c)
 ```
 
-# Errors
+# Errors & Panic
 
 Basic Error:
 ```
@@ -232,6 +232,9 @@ if r, e := funcWithError(); e != nil {
     fmt.Println("success:", r)
 }
 ```
+
+
+[Panic](../examples/41-panic.go)
 
 # Goroutines & Channels
 
@@ -438,4 +441,12 @@ fmt.Println("Ticker stopped")
 [Basic Sorting](../examples/39-sorting.go)
 
 [Sort by Function](../examples/40-sorting-by-functions.go)
+
+
+# Other
+
+[Defer](../examples/42-defer.go)
+
+[Collection Functions](../examples/43-collection-functions.go)
+
 

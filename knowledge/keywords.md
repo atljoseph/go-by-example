@@ -25,6 +25,9 @@ interface
 go
 (channels) chan, close, select
 (channel types) chan string, (sender) myChan <-chan string, (receiver) myChan chan<- string
+error
+nil
+panic
 
 
 
