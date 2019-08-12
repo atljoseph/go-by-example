@@ -443,10 +443,19 @@ fmt.Println("Ticker stopped")
 [Sort by Function](../examples/40-sorting-by-functions.go)
 
 
+# Function Extensions
+
+[Collection Functions](../examples/43-collection-functions.go)
+
+[String Functions](../examples/44-string-functions.go)
+
+
 # Other
 
 [Defer](../examples/42-defer.go)
 
-[Collection Functions](../examples/43-collection-functions.go)
+[String Formatting ("fmt")](../examples/45-string-formatting.go)
+
+
 
 
