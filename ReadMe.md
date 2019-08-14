@@ -7,7 +7,7 @@ Gonna start with `gophercises.com` next ... ??
 
 # Run a Specific Example
 
-`cd go-by-example` to change directory to the examples folder.
+`cd gobyexample` to change directory to the examples folder.
 
 `go run <FILENAME>`, where filename is the path of a golang file (with extension).
 
