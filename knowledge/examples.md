@@ -96,6 +96,10 @@ val, isPresent := n["foo"]
 
 # Functions
 
+[Functions](../gobyexample/11-a-functions.go)
+
+[Aliasing Functions](../gobyexample/11-b-function-aliasing.go)
+
 [Multiple Return Values](../gobyexample/12-functions-multiple-returns.go)
 
 [Variadic Functions](../gobyexample/13-avariadic-functions.go)
@@ -425,6 +429,12 @@ fmt.Println("Ticker stopped")
 
 [Json ("encoding/json")](../gobyexample/47-json.go)
 
+
+# Time
+
+[Time](../gobyexample/48-time.go)
+
+[Epoch](../gobyexample/49-epoch.go)
 
 
 
