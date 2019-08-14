@@ -434,7 +434,7 @@ fmt.Println("Ticker stopped")
 
 [Time](../gobyexample/48-time.go)
 
-[Epoch](../gobyexample/49-epoch.go)
+[Epoch](../gobyexample/49-epoch-time.go)
 
 
 
