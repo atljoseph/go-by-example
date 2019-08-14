@@ -15,9 +15,9 @@ const b = "another string"
 
 # Variables
 
-[Variables](../examples/03-a-variables.go)
+[Variables](../go-by-example/03-a-variables.go)
 
-[Conversions & Casting](../examples/03-b-convert-and-cast.go)
+[Conversions & Casting](../go-by-example/03-b-convert-and-cast.go)
 
 
 # Format
@@ -96,15 +96,15 @@ val, isPresent := n["foo"]
 
 # Functions
 
-[Multiple Return Values](../examples/12-functions-multiple-returns.go)
+[Multiple Return Values](../go-by-example/12-functions-multiple-returns.go)
 
-[Variadic Functions](../examples/13-avariadic-functions.go)
+[Variadic Functions](../go-by-example/13-avariadic-functions.go)
 
-[Optional Function Params](../examples/13-b-optional-function-params.go)
+[Optional Function Params](../go-by-example/13-b-optional-function-params.go)
 
-[Closures](../examples/14-closures.go)
+[Closures](../go-by-example/14-closures.go)
 
-[Recursive Functions](../examples/15-recursive-functions.go)
+[Recursive Functions](../go-by-example/15-recursive-functions.go)
 
 
 # Structs
@@ -196,7 +196,7 @@ if r, e := funcWithError(); e != nil {
 ```
 
 
-[Panic](../examples/41-panic.go)
+[Panic](../go-by-example/41-panic.go)
 
 # Goroutines & Channels
 
@@ -382,48 +382,48 @@ fmt.Println("Ticker stopped")
 
 # Managing Goroutines
 
-[Worker Pools](../examples/33-worker-pools.go)
+[Worker Pools](../go-by-example/33-worker-pools.go)
 
-[Wait Groups](../examples/34-wait-groups.go)
+[Wait Groups](../go-by-example/34-wait-groups.go)
 
-[Rate Limiting](../examples/35-rate-limiting.go)
+[Rate Limiting](../go-by-example/35-rate-limiting.go)
 
 
 # State Management
 
-[Atomic Counters](../examples/36-atomic-counters.go)
+[Atomic Counters](../go-by-example/36-atomic-counters.go)
 
-[Mutexes](../examples/37-mutexes.go)
+[Mutexes](../go-by-example/37-mutexes.go)
 
-[Stateful Goroutines](../examples/38-stateful-goroutines.go)
+[Stateful Goroutines](../go-by-example/38-stateful-goroutines.go)
 
 
 # Sort
 
-[Basic Sorting](../examples/39-sorting.go)
+[Basic Sorting](../go-by-example/39-sorting.go)
 
-[Sort by Function](../examples/40-sorting-by-functions.go)
+[Sort by Function](../go-by-example/40-sorting-by-functions.go)
 
 
 # Function Extensions
 
-[Collection Functions](../examples/43-collection-functions.go)
+[Collection Functions](../go-by-example/43-collection-functions.go)
 
-[String Functions](../examples/44-string-functions.go)
+[String Functions](../go-by-example/44-string-functions.go)
 
 
 # Other
 
-[Defer](../examples/42-defer.go)
+[Defer](../go-by-example/42-defer.go)
 
 
 # Formatting & JSON
 
-[String Formatting ("fmt")](../examples/45-string-formatting.go)
+[String Formatting ("fmt")](../go-by-example/45-string-formatting.go)
 
-[Regular Expressions ("regexp")](../examples/46-regular-expressions.go)
+[Regular Expressions ("regexp")](../go-by-example/46-regular-expressions.go)
 
-[Json ("encoding/json")](../examples/47-json.go)
+[Json ("encoding/json")](../go-by-example/47-json.go)
 
 
 
