@@ -15,14 +15,9 @@ const b = "another string"
 
 # Variables
 
-```
-var a = "a string"
-c := "yet another string"
-var d, e int = 1, 2
-t := []string{"g", "h", "i"}
-```
+[Variables](../examples/03-a-variables.go)
 
-[Conversions & Casting](../examples/7-b-convert-and-cast.go)
+[Conversions & Casting](../examples/03-b-convert-and-cast.go)
 
 
 # Format
@@ -101,52 +96,16 @@ val, isPresent := n["foo"]
 
 # Functions
 
-Multiple Return Values:
-```
-func multipleReturnVals() (int, string) {
-	return 1, "two"
-}
-```
+[Multiple Return Values](../examples/12-functions-multiple-returns.go)
 
-Variadic Functions:
-```
-func sum(desc string, nums ...int) int {
-	fmt.Println(desc)
-	total := 0
-	for _, num := range nums {
-		total += num
-	}
-	return total
-}
-nums := []int{1, 2, 3, 4}
-fmt.Println(sum("Freeze, this is a stick up", nums...))
-```
+[Variadic Functions](../examples/13-avariadic-functions.go)
 
-Closure Functions:
-```
-func intSeq() func() int {
-	i := 0
-	return func() int {
-		i++
-		return i
-	}
-}
-newInt1, newInt2 := intSeq(), intSeq()
-fmt.Println(newInt1())
-fmt.Println(newInt1())
-fmt.Println(newInt2())
-```
+[Optional Function Params](../examples/13-b-optional-function-params.go)
 
-Recursive Functions:
-```
-func factorial(n int) int {
-	if n == 0 {
-		return 1
-	}
-	return n * factorial(n-1)
-}
-fmt.Println(factorial(7))
-```
+[Closures](../examples/14-closures.go)
+
+[Recursive Functions](../examples/15-recursive-functions.go)
+
 
 # Structs
 

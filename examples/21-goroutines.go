@@ -25,7 +25,7 @@ func main() {
 	// goroutines can also be started from anonymous functions
 	go func(msg string) {
 		fmt.Println(msg)
-	}("going")
+	}("going ... Press any key ...")
 
 	// wait for user entry and then exit
 	// if we don't do the wait, then we will not see ethe output in the terminal
