@@ -23,7 +23,7 @@ func addOne(startWith ...int) (int, error) {
 	// validate startWith
 	l := len(startWith)
 	if l > 1 {
-		return 0, errors.New("Too many args. Pleasse use one for this function!")
+		return 0, errors.New("too many args - pleasse use one for this function")
 	}
 
 	// default to 0 if no args
@@ -34,20 +34,14 @@ func addOne(startWith ...int) (int, error) {
 	return s + 1, nil
 }
 
+// implement same function as above
+// panic upon error
 func addOnePanic(startWith ...int) int {
-
-	// validate startWith
-	l := len(startWith)
-	if l > 1 {
-		panic(errors.New("Too many args. Pleasse use one for this function!"))
+	r, e := addOne(startWith...)
+	if e != nil {
+		panic(e)
 	}
-
-	// default to 0 if no args
-	s := 0
-	if l == 1 {
-		s = startWith[0]
-	}
-	return s + 1
+	return r
 }
 
 func main() {
