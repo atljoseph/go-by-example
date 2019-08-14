@@ -10,6 +10,8 @@ import "time"
 import "sync"
 import "sync/atomic"
 import "os"
+import "bytes"
+import "regexp"
 ```
 
 ```
@@ -22,5 +24,7 @@ import (
     "sync"
     "sync/atomic"
     "os"
+    "bytes"
+    "regexp"
 )
 ```

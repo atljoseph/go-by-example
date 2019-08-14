@@ -22,6 +22,9 @@ var d, e int = 1, 2
 t := []string{"g", "h", "i"}
 ```
 
+[Conversions & Casting](../examples/7-b-convert-and-cast.go)
+
+
 # Format
 
 ```
@@ -454,7 +457,14 @@ fmt.Println("Ticker stopped")
 
 [Defer](../examples/42-defer.go)
 
+
+# Formatting & JSON
+
 [String Formatting ("fmt")](../examples/45-string-formatting.go)
+
+[Regular Expressions ("regexp")](../examples/46-regular-expressions.go)
+
+[Json ("encoding/json")](../examples/47-json.go)
 
 
 
