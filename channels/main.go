@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"sync"
 	"time"
 
 	"bitbucket.org/wmsight/flourish-api/flrr"
+	"github.com/pieterclaerhout/go-waitgroup"
 	"github.com/sirupsen/logrus"
 )
 
@@ -72,6 +72,8 @@ func main() {
 	// spawn a goroutine to add inputs to the queue
 	go AddInputsToJobQueue(jobInputChan, jobInputDoneChan)
 
+	// main thread can work while the above threads are working
+
 	// block until all done notified
 	<-allDoneChan
 	logrus.Infof("ALL DONE")
@@ -116,7 +118,11 @@ func RunJobInputQueue(inputs chan JobInput, jobDone chan JobDoneResult) {
 	result := &JobDoneResult{}
 
 	// get a new wait group
-	var wg sync.WaitGroup
+	// This is a special flavor of sync.WaitGroup based on channels
+	// Need to run: `go get github.com/pieterclaerhout/go-waitgroup`
+	// It will always keep X number of worker threads awaited
+	// Pass 0 or -1 in to use it in the same way as sync.WaitGroup
+	wg := waitgroup.NewWaitGroup(5)
 
 	// or be able to batch? or be able to sense when one is added?
 	for processingInput := range inputs {
@@ -125,7 +131,7 @@ func RunJobInputQueue(inputs chan JobInput, jobDone chan JobDoneResult) {
 		input := processingInput
 
 		// add a new wait group
-		wg.Add(1)
+		wg.BlockAdd()
 
 		// spawn new goroutine for each input in channel as it comes
 		go func() {
